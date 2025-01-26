@@ -1,5 +1,5 @@
 let listaDeNumerosSorteados = [];
-let numeroLimite = 10;
+let numeroLimite = 100;
 let numeroSecreto = gerarNumeroAleatorio();
 tentativas = 1;
 function exibirTextoNaTela(tag, texto) {
@@ -11,14 +11,14 @@ function exibirTextoNaTela(tag, texto) {
         utterance.rate = 1.2; 
         window.speechSynthesis.speak(utterance); 
     } else {
-        console.log("Web Speech API não suportada neste navegador.");
+        alert("Web Speech API não suportada neste navegador.");
     }
 }
 
 
 function exibirMensagemInicial () {
     exibirTextoNaTela ('h1', 'Jogo do numero secreto');
-    exibirTextoNaTela ('p', 'Escolha um numero de 1 a 10');
+    exibirTextoNaTela ('p', 'Escolha um numero de 1 a 100');
 }
     exibirMensagemInicial();
 
@@ -81,14 +81,7 @@ function reiniciarJogo() {
 
 
 
-
-
-
-
-
-
-
-
+// forma simples sem a utilização de função
 //let titulo = document.querySelector('h1');
 //titulo.innerHTML = 'Jogo do Número Secreto';
 
